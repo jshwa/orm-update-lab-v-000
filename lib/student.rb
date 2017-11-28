@@ -41,7 +41,6 @@ class Student
 
   def self.new_from_db(row)
     student = Student.new(row[1], row[2], row[0])
-    student
   end
 
   def self.find_by_name(name)
