@@ -46,8 +46,7 @@ class Student
   def self.find_by_name(name)
     sql = "SELECT * FROM students WHERE name = ?"
     student = DB[:conn].execute(sql)
-    new_student = self.new_from_db(student)
-    new_student
+    self.new_from_db(student)
   end
 
   def update
